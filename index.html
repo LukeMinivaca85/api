@@ -1,94 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lukintosh Studios</title>
-<!-- Fonte Inter Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-<style>
-  /* Reset básico */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #e0ecff; /* azul claro de fundo */
-    color: #003366; /* azul escuro para texto */
-    line-height: 1.6;
-    padding: 2rem;
-  }
-  header {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-    color: #001f4d; /* azul bem escuro */
-  }
-  header p {
-    font-size: 1.2rem;
-    color: #0059b3; /* azul vibrante */
-  }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-  section {
-    margin-bottom: 2rem;
-    background-color: #b3c7ff; /* azul médio para fundo do card */
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0, 51, 102, 0.4); /* sombra azul forte */
-    color: #00264d; /* texto azul escuro */
-  }
-  section h2 {
-    color: #001a33;
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-    font-size: 1.5rem;
-  }
-  section p {
-    font-size: 1rem;
-    color: #00264d;
-  }
-  footer {
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #004080;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lukintosh API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f9ff;
+      color: #1a1a1a;
+    }
+    header {
+      background-color: #0056b3;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      color: #003b80;
+    }
+    .api-box {
+      background: white;
+      border-left: 5px solid #007bff;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .api-box h3 {
+      margin-top: 0;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      transition: background-color 0.2s;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #eef3fa;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: #555;
+    }
+    code {
+      background-color: #e1efff;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>Lukintosh Studios</h1>
-  <p>Conheça os estúdios criativos que dão vida ao ecossistema Lukintosh</p>
-</header>
-<main>
+  <header>
+    <h1>Lukintosh API</h1>
+    <p>Conecte seu projeto ao poder do ecossistema Lukintosh</p>
+  </header>
+
   <section>
-    <h2>Rockabye Games</h2>
-    <p>Estúdio de desenvolvimento de jogos inovadores e envolventes, como <em>Lukintosh’s Synthetic Vice</em>.</p>
+    <h2>🔓 APIs Abertas (Públicas)</h2>
+
+    <div class="api-box">
+      <h3>Status da Plataforma</h3>
+      <p>Verifique se os serviços estão online.</p>
+      <code>GET https://api.lukintosh.com/status</code>
+    </div>
+
+    <div class="api-box">
+      <h3>Lista de Jogos</h3>
+      <p>Veja todos os jogos disponíveis no ecossistema Lukintosh.</p>
+      <code>GET https://api.lukintosh.com/games</code>
+    </div>
+
+    <div class="api-box">
+      <h3>Versões do Lukintosh Play Engine</h3>
+      <p>Acompanhe as versões disponíveis da engine.</p>
+      <code>GET https://api.lukintosh.com/engine/releases</code>
+    </div>
   </section>
+
   <section>
-    <h2>Lukintosh Studios</h2>
-    <p>Foco em criação multimídia e desenvolvimento de experiências digitais.</p>
+    <h2>🔐 APIs com Autenticação</h2>
+
+    <div class="api-box">
+      <h3>Usuários e Dados Salvos</h3>
+      <p>Acesse perfis, jogos salvos e preferências do usuário.</p>
+      <code>GET https://api.lukintosh.com/user/data</code>
+    </div>
+
+    <div class="api-box">
+      <h3>LuktoAI e NovaAI</h3>
+      <p>Use as IAs do ecossistema Lukintosh com autenticação.</p>
+      <code>POST https://api.lukintosh.com/ai/lukto</code>
+    </div>
+
+    <div class="api-box">
+      <h3>Analytics da Play Engine</h3>
+      <p>Receba métricas em tempo real da sua integração com a engine.</p>
+      <code>GET https://api.lukintosh.com/analytics</code>
+    </div>
+
+    <div>
+      <a href="https://accounts.lukintosh.com" class="btn">Gerar API Key</a>
+      <a href="https://support.lukintosh.com" class="btn">Fale com o Suporte</a>
+      <a href="#docs" class="btn">Ver Documentação</a>
+    </div>
   </section>
-  <section>
-    <h2>Lukintosh Music Studio</h2>
-    <p>Produção musical profissional e sound design que dão vida às nossas criações.</p>
-  </section>
-  <section>
-    <h2>Lukintosh Filmworks</h2>
-    <p>Especializado em produção audiovisual e filmes, trazendo histórias emocionantes para as telas.</p>
-  </section>
-</main>
-<footer>
-  &copy; 2025 Lukintosh Corporation. Todos os direitos reservados.
-</footer>
+
+  <footer>
+    © 2025 Lukintosh Corporation — api.lukintosh.com
+  </footer>
 </body>
 </html>
